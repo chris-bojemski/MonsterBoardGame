@@ -135,8 +135,8 @@ class ApiHandler
       stat['stat']['name'] == 'special-defense'
     end['base_stat']
 
-    sprite_front = data['sprites']['front-default']
-    sprite_back = data['sprites']['back-default']
+    sprite_front = data['sprites']['front_default']
+    sprite_back = data['sprites']['back_default']
 
     # binding.pry
     pruned_data = data
