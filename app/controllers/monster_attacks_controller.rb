@@ -1,0 +1,2 @@
+class MonsterAttacksController < ApplicationController
+end
