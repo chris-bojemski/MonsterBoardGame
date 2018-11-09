@@ -1,5 +1,6 @@
 require 'pry'
 
+
 class ApiHandler
   attr_reader :type_data, :pokemon_data, :pokemon_urls
 
@@ -182,5 +183,17 @@ class ApiHandler
   def get_data(link)
     JSON.parse(RestClient.get(link))
   end
+
+  def link_strongest_attack
+    Monster.all.each do |monster| 
+      if monster.attacks
+        main_attack = monster.attacks.where.not(power: nil).order(power: :desc)[0]
+        if main_attack 
+          main_attack_id = main_attack.id
+          Monster.update(monster.id, main_attack_id: main_attack_id)
+        end 
+      end
+    end 
+  end 
 
 end

@@ -31,3 +31,10 @@ puts ''
 
 api.make_available_moves
 puts ''
+
+api.link_strongest_attack
+puts '⚠️ WARNING'
+puts 'Not all Pokemon have moves in our dataset.'
+puts ''
+
+puts 'Done seeding.'
