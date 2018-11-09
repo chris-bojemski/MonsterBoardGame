@@ -1,6 +1,6 @@
 class MonstersController < ApplicationController
   def index
-    monsters = Monster.all
+    monsters = Monster.where(:id <= 151)
     render json: monsters
   end
 end

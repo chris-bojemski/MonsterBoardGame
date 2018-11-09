@@ -9,6 +9,7 @@ class ApiHandler
     @pokemon_data = []
     @pokemon_urls = []
     @move_urls = []
+    @evo_links = []
   end
 
   def get_type_data_from_api
@@ -136,6 +137,8 @@ class ApiHandler
       stat['stat']['name'] == 'special-defense'
     end['base_stat']
 
+    weight = data['weight']
+
     sprite_front = data['sprites']['front_default']
     sprite_back = data['sprites']['back_default']
 
@@ -151,6 +154,7 @@ class ApiHandler
       special_defense: special_defense,
       sprite_front: sprite_front,
       sprite_back: sprite_back,
+      weight: weight,
     })
     # PokemonJson.create({pokemon_id: pokemon.id, data: pruned_data})
   end
@@ -193,6 +197,45 @@ class ApiHandler
           Monster.update(monster.id, main_attack_id: main_attack_id)
         end 
       end
+    end 
+  end 
+
+  def get_evolution_chain_links
+    data = JSON.parse(RestClient.get('https://pokeapi.co/api/v2/evolution-chain/'))['results']
+    data.each do |r|
+      @evo_links << r['url']
+      print '.'
+    end
+  end 
+
+  def set_evolution_chains
+    @evo_links.each do |link|
+      chain = JSON.parse(RestClient.get(link))['chain']
+      handle_chain_data(chain, 1)
+      print '.'
+    end
+  end
+
+  def handle_chain_data(chain_data, counter) 
+    monster = Monster.find_by(name: chain_data['species']['name'])
+    if monster.nil? 
+      return 
+    end 
+    
+    if chain_data['evolves_to'].empty? && counter == 1
+      monster = Monster.find_by(name: chain_data['species']['name'])
+      Monster.update(monster.id, evo_level: 6)
+      return
+    end 
+
+    Monster.update(monster.id, evo_level: counter)
+
+    if chain_data['evolves_to'].empty? 
+      return
+    end 
+
+    chain_data['evolves_to'].each do |evolution|
+      handle_chain_data(evolution, counter + 1)
     end 
   end 
 

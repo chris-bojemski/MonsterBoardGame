@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_09_000827) do
+ActiveRecord::Schema.define(version: 2018_11_09_144659) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,8 @@ ActiveRecord::Schema.define(version: 2018_11_09_000827) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "main_attack_id"
+    t.integer "weight"
+    t.integer "evo_level"
   end
 
   add_foreign_key "attacks", "elements"
