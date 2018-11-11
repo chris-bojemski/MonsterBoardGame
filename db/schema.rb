@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_09_144659) do
+ActiveRecord::Schema.define(version: 2018_11_11_181404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,9 +66,26 @@ ActiveRecord::Schema.define(version: 2018_11_09_144659) do
     t.integer "evo_level"
   end
 
+  create_table "team_assignments", force: :cascade do |t|
+    t.bigint "monster_id"
+    t.bigint "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["monster_id"], name: "index_team_assignments_on_monster_id"
+    t.index ["team_id"], name: "index_team_assignments_on_team_id"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "attacks", "elements"
   add_foreign_key "monster_attacks", "attacks"
   add_foreign_key "monster_attacks", "monsters"
   add_foreign_key "monster_elements", "elements"
   add_foreign_key "monster_elements", "monsters"
+  add_foreign_key "team_assignments", "monsters"
+  add_foreign_key "team_assignments", "teams"
 end

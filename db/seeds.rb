@@ -63,4 +63,31 @@ Monster.update(126, evo_level: 1)
 Monster.update(143, evo_level: 1)
 puts ''
 
+puts 'Making Teams.'
+t1 = Team.create(name:'Pallet Town')
+bulba = Monster.find_by(name: 'bulbasaur')
+charm = Monster.find_by(name: 'charmander')
+squir = Monster.find_by(name: 'squirtle')
+pidge = Monster.find_by(name: 'pidgeotto')
+raich = Monster.find_by(name: 'raichu')
+venus = Monster.find_by(name: 'venusaur')
+t1.monsters << bulba
+t1.monsters << charm
+t1.monsters << squir
+t1.monsters << pidge
+t1.monsters << raich
+t1.monsters << venus
+
+t2 = Team.create(name:'Lance')
+gyara = Monster.find_by(name: 'gyarados')
+drati = Monster.find_by(name: 'dratini')
+drago = Monster.find_by(name: 'dragonair')
+dnite = Monster.find_by(name: 'dragonite')
+aerod = Monster.find_by(name: 'aerodactyl')
+t2.monsters << gyara
+t2.monsters << drati
+t2.monsters << drago
+t2.monsters << dnite
+t2.monsters << aerod
+
 puts '👍  Done seeding.'
