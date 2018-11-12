@@ -65,29 +65,47 @@ puts ''
 
 puts 'Making Teams.'
 t1 = Team.create(name:'Pallet Town')
-bulba = Monster.find_by(name: 'bulbasaur')
+pikac = Monster.find_by(name: 'pikachu')
 charm = Monster.find_by(name: 'charmander')
 squir = Monster.find_by(name: 'squirtle')
 pidge = Monster.find_by(name: 'pidgeotto')
-raich = Monster.find_by(name: 'raichu')
+radic = Monster.find_by(name: 'radicate')
 venus = Monster.find_by(name: 'venusaur')
-t1.monsters << bulba
+t1.monsters << pikac
 t1.monsters << charm
 t1.monsters << squir
 t1.monsters << pidge
-t1.monsters << raich
+t1.monsters << radic
 t1.monsters << venus
 
 t2 = Team.create(name:'Lance')
-gyara = Monster.find_by(name: 'gyarados')
 drati = Monster.find_by(name: 'dratini')
+gyara = Monster.find_by(name: 'gyarados')
 drago = Monster.find_by(name: 'dragonair')
 dnite = Monster.find_by(name: 'dragonite')
 aerod = Monster.find_by(name: 'aerodactyl')
+czard = Monster.find_by(name: 'charizard')
 t2.monsters << gyara
 t2.monsters << drati
 t2.monsters << drago
 t2.monsters << dnite
 t2.monsters << aerod
+t2.monsters << czard
+
+t3 = Team.create(name:'Weirdos')
+jynx = Monster.find_by(name: 'jynx')
+mrmim = Monster.find_by(name: 'mr-mime')
+genga = Monster.find_by(name: 'gengar')
+farfe = Monster.find_by(name: 'farfetchd')
+poryg = Monster.find_by(name: 'porygon')
+magik = Monster.find_by(name: 'magikarp')
+
+t3.monsters << jynx
+t3.monsters << mrmim
+t3.monsters << genga
+t3.monsters << farfe
+t3.monsters << poryg
+t3.monsters << magik
+
 
 puts '👍  Done seeding.'
