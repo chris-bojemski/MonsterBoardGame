@@ -69,13 +69,13 @@ pikac = Monster.find_by(name: 'pikachu')
 charm = Monster.find_by(name: 'charmander')
 squir = Monster.find_by(name: 'squirtle')
 pidge = Monster.find_by(name: 'pidgeotto')
-radic = Monster.find_by(name: 'radicate')
+ratic = Monster.find_by(name: 'raticate')
 venus = Monster.find_by(name: 'venusaur')
 t1.monsters << pikac
 t1.monsters << charm
 t1.monsters << squir
 t1.monsters << pidge
-t1.monsters << radic
+t1.monsters << ratic
 t1.monsters << venus
 
 t2 = Team.create(name:'Lance')
@@ -99,7 +99,6 @@ genga = Monster.find_by(name: 'gengar')
 farfe = Monster.find_by(name: 'farfetchd')
 poryg = Monster.find_by(name: 'porygon')
 magik = Monster.find_by(name: 'magikarp')
-
 t3.monsters << jynx
 t3.monsters << mrmim
 t3.monsters << genga
