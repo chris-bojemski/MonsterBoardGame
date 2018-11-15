@@ -80,16 +80,16 @@ t1.monsters << venus
 
 t2 = Team.create(name:"Lance's Sea Monsters")
 drati = Monster.find_by(name: 'dratini')
-drago = Monster.find_by(name: 'dragonair')
-aerod = Monster.find_by(name: 'aerodactyl')
+stary = Monster.find_by(name: 'staryu')
+magik = Monster.find_by(name: 'magikarp')
 gyara = Monster.find_by(name: 'gyarados')
-warto = Monster.find_by(name: 'wartortle')
+drago = Monster.find_by(name: 'dragonair')
 dnite = Monster.find_by(name: 'dragonite')
 t2.monsters << drati
-t2.monsters << drago
-t2.monsters << aerod
+t2.monsters << stary
+t2.monsters << magik
 t2.monsters << gyara
-t2.monsters << warto
+t2.monsters << drago
 t2.monsters << dnite
 
 
@@ -97,13 +97,13 @@ t3 = Team.create(name:'Pokemon Tower Ghouls')
 geodu = Monster.find_by(name: 'geodude')
 zubat = Monster.find_by(name: 'zubat')
 gastl = Monster.find_by(name: 'gastly')
-marow = Monster.find_by(name: 'marowak')
+aerod = Monster.find_by(name: 'aerodactyl')
 haunt = Monster.find_by(name: 'haunter')
 genga = Monster.find_by(name: 'gengar')
 t3.monsters << geodu
 t3.monsters << zubat
 t3.monsters << gastl
-t3.monsters << marow
+t3.monsters << aerod
 t3.monsters << haunt
 t3.monsters << genga
 
