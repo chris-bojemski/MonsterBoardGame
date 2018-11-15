@@ -121,4 +121,32 @@ t4.monsters << nidor
 t4.monsters << raich
 t4.monsters << nidok
 
+t5 = Team.create(name:'Stay Out of the Fire')
+arcan = Monster.find_by(name: 'arcanine')
+ponyt = Monster.find_by(name: 'ponyta')
+vulpi = Monster.find_by(name: 'vulpix')
+ninet = Monster.find_by(name: 'ninetales')
+growl = Monster.find_by(name: 'growlithe')
+chari = Monster.find_by(name: 'charizard')
+t5.monsters << arcan
+t5.monsters << ponyt
+t5.monsters << vulpi
+t5.monsters << ninet
+t5.monsters << growl
+t5.monsters << chari
+
+t6 = Team.create(name:'Saffron City Super Team')
+eevee = Monster.find_by(name: 'eevee')
+koffi = Monster.find_by(name: 'koffing')
+meowt = Monster.find_by(name: 'meowth')
+paras = Monster.find_by(name: 'parasect')
+scyth = Monster.find_by(name: 'scyther')
+alaka = Monster.find_by(name: 'alakazam')
+t6.monsters << eevee
+t6.monsters << koffi
+t6.monsters << meowt
+t6.monsters << paras
+t6.monsters << scyth
+t6.monsters << alaka
+
 puts '👍  Done seeding.'
