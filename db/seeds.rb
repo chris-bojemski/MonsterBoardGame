@@ -64,7 +64,7 @@ Monster.update(143, evo_level: 1)
 puts ''
 
 puts 'Making Teams.'
-t1 = Team.create(name:'Pallet Town')
+t1 = Team.create(name:'Pallet Town Pwners')
 pikac = Monster.find_by(name: 'pikachu')
 charm = Monster.find_by(name: 'charmander')
 squir = Monster.find_by(name: 'squirtle')
@@ -78,33 +78,47 @@ t1.monsters << pidge
 t1.monsters << ratic
 t1.monsters << venus
 
-t2 = Team.create(name:'Lance')
+t2 = Team.create(name:"Lance's Sea Monsters")
 drati = Monster.find_by(name: 'dratini')
-gyara = Monster.find_by(name: 'gyarados')
 drago = Monster.find_by(name: 'dragonair')
-dnite = Monster.find_by(name: 'dragonite')
 aerod = Monster.find_by(name: 'aerodactyl')
-czard = Monster.find_by(name: 'charizard')
-t2.monsters << gyara
+gyara = Monster.find_by(name: 'gyarados')
+warto = Monster.find_by(name: 'wartortle')
+dnite = Monster.find_by(name: 'dragonite')
 t2.monsters << drati
 t2.monsters << drago
-t2.monsters << dnite
 t2.monsters << aerod
-t2.monsters << czard
+t2.monsters << gyara
+t2.monsters << warto
+t2.monsters << dnite
 
-t3 = Team.create(name:'Weirdos')
-jynx = Monster.find_by(name: 'jynx')
-mrmim = Monster.find_by(name: 'mr-mime')
+
+t3 = Team.create(name:'Pokemon Tower Ghouls')
+geodu = Monster.find_by(name: 'geodude')
+zubat = Monster.find_by(name: 'zubat')
+gastl = Monster.find_by(name: 'gastly')
+marow = Monster.find_by(name: 'marowak')
+haunt = Monster.find_by(name: 'haunter')
 genga = Monster.find_by(name: 'gengar')
-farfe = Monster.find_by(name: 'farfetchd')
-poryg = Monster.find_by(name: 'porygon')
-magik = Monster.find_by(name: 'magikarp')
-t3.monsters << jynx
-t3.monsters << mrmim
+t3.monsters << geodu
+t3.monsters << zubat
+t3.monsters << gastl
+t3.monsters << marow
+t3.monsters << haunt
 t3.monsters << genga
-t3.monsters << farfe
-t3.monsters << poryg
-t3.monsters << magik
 
+t4 = Team.create(name:'Safari Zone Hunters')
+ekans = Monster.find_by(name: 'ekans')
+cater = Monster.find_by(name: 'caterpie')
+cubon = Monster.find_by(name: 'cubone')
+nidor = Monster.find_by(name: 'nidorina')
+raich = Monster.find_by(name: 'raichu')
+nidok = Monster.find_by(name: 'nidoking')
+t4.monsters << ekans
+t4.monsters << cater
+t4.monsters << cubon
+t4.monsters << nidor
+t4.monsters << raich
+t4.monsters << nidok
 
 puts '👍  Done seeding.'
