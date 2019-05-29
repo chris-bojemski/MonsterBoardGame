@@ -71,6 +71,12 @@ squir = Monster.find_by(name: 'squirtle')
 pidge = Monster.find_by(name: 'pidgeotto')
 ratic = Monster.find_by(name: 'raticate')
 venus = Monster.find_by(name: 'venusaur')
+pikac.evo_level = 1
+charm.evo_level = 1
+squir.evo_level = 1
+pidge.evo_level = 2
+ratic.evo_level = 2
+venus.evo_level = 3
 t1.monsters << pikac
 t1.monsters << charm
 t1.monsters << squir
@@ -85,6 +91,12 @@ magik = Monster.find_by(name: 'magikarp')
 gyara = Monster.find_by(name: 'gyarados')
 drago = Monster.find_by(name: 'dragonair')
 dnite = Monster.find_by(name: 'dragonite')
+drati.evo_level = 1
+stary.evo_level = 1
+magik.evo_level = 1
+gyara.evo_level = 2
+drago.evo_level = 2
+dnite.evo_level = 3
 t2.monsters << drati
 t2.monsters << stary
 t2.monsters << magik
@@ -100,6 +112,12 @@ gastl = Monster.find_by(name: 'gastly')
 aerod = Monster.find_by(name: 'aerodactyl')
 haunt = Monster.find_by(name: 'haunter')
 genga = Monster.find_by(name: 'gengar')
+drati.evo_level = 1
+zubat.evo_level = 1
+gastl.evo_level = 1
+aerod.evo_level = 2
+haunt.evo_level = 2
+genga.evo_level = 3
 t3.monsters << geodu
 t3.monsters << zubat
 t3.monsters << gastl
@@ -114,6 +132,12 @@ cubon = Monster.find_by(name: 'cubone')
 nidor = Monster.find_by(name: 'nidorina')
 raich = Monster.find_by(name: 'raichu')
 nidok = Monster.find_by(name: 'nidoking')
+ekans.evo_level = 1
+cater.evo_level = 1
+cubon.evo_level = 1
+nidor.evo_level = 2
+raich.evo_level = 2
+nidok.evo_level = 3
 t4.monsters << ekans
 t4.monsters << cater
 t4.monsters << cubon
@@ -128,6 +152,12 @@ vulpi = Monster.find_by(name: 'vulpix')
 ninet = Monster.find_by(name: 'ninetales')
 growl = Monster.find_by(name: 'growlithe')
 chari = Monster.find_by(name: 'charizard')
+arcan.evo_level = 1
+ponyt.evo_level = 1
+vulpi.evo_level = 1
+ninet.evo_level = 2
+growl.evo_level = 2
+chari.evo_level = 3
 t5.monsters << arcan
 t5.monsters << ponyt
 t5.monsters << vulpi
@@ -142,6 +172,12 @@ meowt = Monster.find_by(name: 'meowth')
 paras = Monster.find_by(name: 'parasect')
 scyth = Monster.find_by(name: 'scyther')
 alaka = Monster.find_by(name: 'alakazam')
+eevee.evo_level = 1
+koffi.evo_level = 1
+meowt.evo_level = 1
+paras.evo_level = 2
+scyth.evo_level = 2
+alaka.evo_level = 3
 t6.monsters << eevee
 t6.monsters << koffi
 t6.monsters << meowt
